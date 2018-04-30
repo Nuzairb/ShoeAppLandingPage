@@ -386,6 +386,58 @@ hr {
     width: 100%;
     max-width: 130px; }
 
+#discount {
+  margin-top: 65px; }
+
+.discountLayout {
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .discountLayout .offer {
+    width: 40%;
+    margin: 0 auto; }
+  .discountLayout .offer .button {
+    background: #009efd;
+    background: linear-gradient(-100deg, #009efd 0%, #15c9cb 48%, #2af598 100%);
+    color: white;
+    padding: 20px 80px;
+    font-size: 18px; }
+  .discountLayout h2 {
+    margin-bottom: 15px; }
+
+#download {
+  color: white;
+  text-align: center;
+  background: url("../img/downloadBackground.jpg") no-repeat;
+  background-size: cover;
+  padding: 120px 0;
+  margin-top: -70px; }
+  #download h2 {
+    font-size: 68px;
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: 900; }
+  #download p {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px auto 40px;
+    font-weight: 900; }
+  #download .button {
+    position: relative;
+    width: 250px;
+    margin: 0 15px;
+    padding: 20px 0;
+    padding-left: 35px; }
+  #download .apple:before, #download .google:before {
+    position: absolute;
+    display: block;
+    left: 22%;
+    top: 19px; }
+  #download .apple:before {
+    content: url("../img/appleicon.png"); }
+  #download .google:before {
+    content: url("../img/playicon.png"); }
+
 .flex-video {
   height: 0;
   margin-bottom: 0.88889rem;
@@ -406,7 +458,7 @@ hr {
 #header {
   background: url("../img/heroBackground.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 750px;
   color: white;
   text-align: center;
   overflow: hidden; }
