@@ -461,6 +461,7 @@ a.download {
   margin-top: -70px; }
   @media only screen and (max-width: 680px) {
     #download {
+      background: url("../img/downloadBackgroundSmall.jpg") no-repeat;
       margin-top: 75px;
       padding: 60px; } }
   #download h2 {
