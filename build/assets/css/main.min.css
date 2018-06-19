@@ -240,7 +240,8 @@ input[type="button"] {
   input[type="button"]:active,
   input[type="button"]:focus {
     outline: 0;
-    transform: translateY(3px); }
+    transform: translateY(3px);
+    color: black; }
 
 a {
   color: blue;
@@ -333,9 +334,16 @@ hr {
 .main-nav {
   display: flex;
   margin-top: 20px;
-  padding: 0; }
+  padding: 0;
+  transition: all 0.2s ease; }
+  .main-nav li.logo {
+    margin-right: auto;
+    padding: 10px 0; }
+    .main-nav li.logo a {
+      padding: 0; }
   .main-nav li {
-    list-style: none; }
+    list-style: none;
+    display: inline-block; }
   .main-nav a {
     color: white;
     display: block;
@@ -347,17 +355,45 @@ hr {
     transition: all 0.2s ease; }
   .main-nav a:hover, .main-nav a:active {
     color: #00adff; }
-  .main-nav li:first-child {
-    margin-right: auto;
-    padding: 10px 0; }
-    .main-nav li:first-child a {
-      padding: 0; }
+  .main-nav a.download {
+    background: white;
+    color: #00adff;
+    box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2);
+    margin-left: 25px; }
 
-a.download {
-  background: white;
-  color: #00adff;
-  box-shadow: 0 12px 10px -10px rgba(0, 0, 0, 0.2);
-  margin-left: 25px; }
+li.nav-toggle {
+  display: none; }
+  li.nav-toggle a {
+    padding-right: 0; }
+
+@media screen and (max-width: 750px) {
+  li.nav-toggle {
+    display: block;
+    z-index: 100; }
+  .responsive-nav {
+    display: none; }
+  .responsive-nav.unfold {
+    display: block;
+    width: 100%;
+    background: #1f1f1f;
+    position: absolute;
+    top: 0;
+    right: 0; }
+  .responsive-nav.unfold li {
+    display: block; }
+  .responsive-nav.unfold a {
+    padding: 40px;
+    display: block;
+    text-align: center; }
+  .responsive-nav.unfold a:hover {
+    transform: translate(0);
+    color: #00adff; }
+  .responsive-nav.unfold a.download {
+    background: inherit;
+    color: white;
+    margin-left: 0; }
+  .responsive-nav.unfold a.download:hover {
+    color: #00adff; } }
 
 #features {
   background: #f9f9f9;
@@ -378,6 +414,9 @@ a.download {
     transform: skewY(-10deg);
     transform-origin: 100%;
     z-index: -1; }
+    @media only screen and (max-width: 680px) {
+      #features:after {
+        display: none; } }
   #features h2 {
     margin: 80px 0; }
 
@@ -431,10 +470,16 @@ a.download {
   @media only screen and (max-width: 680px) {
     .discountLayout {
       display: block; } }
-  @media only screen and (max-width: 680px) {
-    .discountLayout img {
-      width: 100%;
-      max-width: 400px; } }
+  .discountLayout img {
+    width: 100%;
+    max-width: 500px; }
+    @media only screen and (max-width: 680px) {
+      .discountLayout img {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+        margin: 0 auto;
+        display: block; } }
   .discountLayout .offer {
     width: 40%;
     margin: 0 auto; }
@@ -498,7 +543,7 @@ a.download {
 
 #footer {
   text-align: center;
-  padding: 60px 0; }
+  padding: 75px 0; }
   #footer li {
     list-style: none; }
     #footer li a {
@@ -531,7 +576,8 @@ a.download {
   overflow: hidden; }
   @media only screen and (max-width: 680px) {
     #header {
-      height: 500px; } }
+      height: 500px;
+      background: url("../img/heroBackgroundSmall.jpg") no-repeat; } }
   #header img {
     max-width: 500px;
     width: 100%; }
